@@ -19,3 +19,41 @@ Se exploran y entrenan modelos de clasificación `MultinomialNB` y `ComplementNB
 ### 3. Análisis de Similaridad entre Palabras
 
 La matriz documento-término es transpuesta para obtener una matriz término-documento, lo que permite estudiar la similaridad entre palabras. Se seleccionan manualmente 5 palabras relevantes y se mide la similaridad coseno con otras palabras en el vocabulario. Este análisis permite interpretar las relaciones semánticas entre términos según su contexto de uso en los documentos.
+
+<br>
+
+# [Desafío 2](desafio_2/Desafio_2.ipynb)
+
+Este trabajo tiene como objetivo explorar y analizar las relaciones semánticas entre palabras utilizando modelos de word embeddings entrenados con Gensim.
+
+## Contenidos
+
+### 1. Entrenamiento de Embeddings
+
+Utilización de `nltk` y `Gensim` para procesar el dataset de reseñas de películas de IMDb y generar vectores de embeddings que representan las palabras en un espacio semántico.
+
+### 2. Relaciones Semánticas entre Palabras
+
+Se realizaron pruebas para identificar las palabras más y menos relacionadas con términos clave como:
+
+- "excellent"
+- "boring"
+- "plot"
+- "director"
+- "soundtrack"
+- "actor"
+
+Los resultados muestran que el modelo es capaz de capturar relaciones esperadas, como la cercanía entre **"excellent"** y **"phenomenal"** o entre **"boring"** y **"predictable"**.
+
+### 3. Test de Analogías
+
+Para validar la capacidad del modelo de identificar analogías, se realizaron las siguientes pruebas:
+
+- **man** es a **woman** como **actor** es a **actress**
+- **good** es a **bad** como **entertaining** es a **insipid**
+
+Los resultados demuestran que el modelo capta correctamente tanto relaciones de género como opuestos, destacando su capacidad para reconocer patrones semánticos más profundos.
+
+### 4. Visualización de Embeddings
+
+Los embeddings fueron visualizados en espacios 2D y 3D, mostrando las relaciones geométricas entre los términos seleccionados.
