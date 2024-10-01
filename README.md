@@ -57,3 +57,31 @@ Los resultados demuestran que el modelo capta correctamente tanto relaciones de 
 ### 4. Visualización de Embeddings
 
 Los embeddings fueron visualizados en espacios 2D y 3D, mostrando las relaciones geométricas entre los términos seleccionados.
+
+<br>
+
+# [Desafío 3](desafio_3/Desafio_3.ipynb)
+
+Este proyecto implementa modelos de lenguaje entrenados con reseñas de películas de IMDb para la generación automática de secuencias de texto. Se exploran dos enfoques de tokenización: tokenización por palabras y tokenización por caracteres. Ambos enfoques utilizan el algoritmo de **Beam Search** para la generación de secuencias.
+
+## Contenidos
+
+### 1. Tokenización por palabras
+
+El modelo predice secuencias basadas en la estructura de las palabras en las reseñas.
+
+- **Input**: "two teen couples go to"
+- **Result**: "two teen couples go to patrick's"
+
+- **Input**: "watch the movie and"
+- **Result**: "watch the movie and the performance"
+
+### 2. Tokenización por caracteres
+
+El modelo genera secuencias de texto prediciendo carácter por carácter.
+
+- **Input**: "two teen couples go to"
+- **Result**: "two teen couples go to the"
+
+- **Input**: "watch the movie and"
+- **Result**: "watch the movie and see"
