@@ -85,3 +85,36 @@ El modelo genera secuencias de texto prediciendo carácter por carácter.
 
 - **Input**: "watch the movie and"
 - **Result**: "watch the movie and see"
+
+<br>
+
+# [Desafío 4](desafio_4/Desafio_4.ipynb)
+
+En este proyecto, se ha construido un modelo de bot de Preguntas y Respuestas (Q&A) utilizando los datos del *Conversational Intelligence Challenge 2* (ConvAI2). El objetivo principal ha sido crear un sistema capaz de generar respuestas coherentes y contextuales a preguntas comunes basadas en los datos proporcionados.
+
+## Contenidos
+
+### 1. Preprocesamiento de Datos  
+
+Se llevó a cabo la limpieza y tokenización de los datos del dataset ConvAI2 para preparar el conjunto de entrenamiento.
+
+### 2. Generación de Embeddings 
+
+Se utilizaron los embeddings de Glove para transformar los tokens de entrada en vectores, representando las palabras de manera semánticamente significativa.
+
+### 3. Entrenamiento del Modelo 
+
+Se entrenó un modelo basado en un esquema *encoder-decoder* utilizando los datos preprocesados y los embeddings generados.
+
+### 4. Evaluación y Resultados  
+
+Se realizaron experimentos para evaluar la calidad y coherencia de las respuestas generadas. El modelo es capaz de responder preguntas comunes con cierta coherencia. Ejemplos de entradas y respuestas generadas incluyen:
+
+- **Input:** "what is your hobby?"  
+  **Response:** "i like to play video games"
+
+- **Input:** "wat do you do for a living?"  
+  **Response:** "i m a student"
+
+- **Input:** "do you have any pet?"  
+  **Response:** "no"
