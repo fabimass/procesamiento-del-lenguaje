@@ -118,3 +118,42 @@ Se realizaron experimentos para evaluar la calidad y coherencia de las respuesta
 
 - **Input:** "do you have any pet?"  
   **Response:** "no"
+
+<br>
+
+# [Desafío 5](desafio_5/Desafio_5.ipynb)
+
+Este proyecto implementa un análisis de sentimiento sobre reseñas de usuarios utilizando BERT (Bidirectional Encoder Representations from Transformers). El objetivo es clasificar reseñas en categorías de sentimiento como muy positivo, positivo, neutral, negativo y muy negativo.
+
+## Contenidos
+
+### 1. Preprocesamiento de Datos 
+
+Los textos fueron limpiados y convertidos en tokens utilizando `tokenizers.BertTokenizer`. Además, las etiquetas de clasificación se transformaron en un formato adecuado para el entrenamiento.
+
+### 2. Carga y Ajuste del Modelo BERT
+
+Se utilizó un modelo preentrenado de BERT (`bert-base-uncased`) y se realizaron modificaciones para ajustarlo a las cinco categorías de salida. Se añadió una capa densa adicional para manejar la clasificación multicategorica.
+
+### 3. Entrenamiento del Modelo
+
+Se dividió el conjunto de datos en subconjuntos de entrenamiento y prueba, y el modelo fue entrenado utilizando el optimizador Adam. También se incorporaron técnicas de regularización, como dropout, para evitar el sobreajuste.
+
+### 4. Evaluación y Resultados
+
+El modelo fue evaluado en el conjunto de prueba, logrando una precisión aceptable en la clasificación de las reseñas. A continuación se muestran algunos ejemplos de clasificación de textos:
+
+- **Reseña:** "I love this app!"
+  **Clasificación:** very positive
+
+- **Reseña:** "Fair enough"
+  **Clasificación:** positive
+
+- **Reseña:** "Useful but could improve"
+  **Clasificación:** positive
+
+- **Reseña:** "Not what I expected"
+  **Clasificación:** very negative
+
+- **Reseña:** "This is the worst app I have seen!"
+  **Clasificación:** very negative
